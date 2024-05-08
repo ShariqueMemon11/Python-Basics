@@ -1,2 +1,2 @@
 # Python-Basics
-# Try to improve my basics by making different projects
+# Trying to improve my basics by making different projects
