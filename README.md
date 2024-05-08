@@ -1,2 +1,2 @@
 # Python-Basics
-# hello World
+# Try to improve my basics by making different projects
