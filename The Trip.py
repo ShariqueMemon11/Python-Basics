@@ -67,7 +67,7 @@ for trip in Members:
         i+=1
     trip['Amount_exchanged_to_equalize']=total_exchanged    
 
-#printing data of every trip with there total expense and total amount that need to be exchanged to equalize
+# printing data of every trip with there total expense and total amount that need to be exchanged to equalize
 print("\nList of Members with their Expenses for each Trip:")
 for trip in Members:
     print(f"  Total Expense for Trip {trip['trip']}: {trip['total_expense']}")
