@@ -1,0 +1,25 @@
+def bfs(graph , start):
+    queue=[start];
+    visited=[];
+    
+    while queue:
+        current=queue.pop(0);
+        
+        if current not in visited:
+            print(current , end=" ")
+            visited.append(current)
+        
+        for i in graph[current]:
+            if i not in visited:
+                queue.append(i)
+
+graph={
+    '5':['3' , '7'],
+    '3':['2' , '4'],
+    '7':['8'],
+    '2':['2'],
+    '4':['8'],
+    '8':[],
+}
+
+bfs(graph , '5')
