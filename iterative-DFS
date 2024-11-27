@@ -1,0 +1,25 @@
+def dfs(graph , start):
+    stack = [start];
+    visited = [];
+    
+    while stack:
+        current = stack.pop()
+        
+        if current not in visited:
+            print(current , end=" ")
+            visited.append(current)
+            
+        for i in reversed(graph[current]):
+            if i not in visited:
+                stack.append(i);
+
+graph={
+    '5':['3' , '7'],
+    '3':['2' , '4'],
+    '7':['8'],
+    '2':['2'],
+    '4':['8'],
+    '8':[],
+}
+
+dfs(graph , '5')
