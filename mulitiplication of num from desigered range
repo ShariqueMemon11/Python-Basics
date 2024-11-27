@@ -1,0 +1,13 @@
+sum = 0;
+while True:
+    multiplier = int(input("Enter the number for which you want the table: "))
+    startingrange = int(input("Enter the starting range: "));
+    endingrange = int(input("Enter the ending range: "));
+    for i in range(startingrange , endingrange + 1):
+        sum = multiplier*i;
+        print(f"{multiplier} x {i} = {sum}")
+    
+    check = input("do you want to try it again with another num yes or no: ")
+    if(check == "no"):
+        break;
+        
