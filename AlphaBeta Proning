@@ -1,0 +1,28 @@
+def alphabeta(cd , index , values , maxturn , alpha , beta , maxdepth):
+    if cd == maxdepth:
+        return values[index]
+    
+    if maxturn:
+        best= float('-inf')
+        for i in range(2):
+            val=alphabeta(cd + 1 , index * 2 + i , values , False , alpha , beta , maxdepth )
+            best = max(best,val)
+            alpha = max(alpha,best)
+            if beta <= alpha:
+                break
+        
+        return best
+    else:
+        best= float('inf')
+        for i in range(2):
+            val=alphabeta(cd + 1 , index * 2 + i , values , True , alpha , beta , maxdepth )
+            best = min(best,val)
+            beta = min(beta,best)
+            if beta <= alpha:
+                break
+    
+        return best
+        
+values = [2, 3, 5, 9, 0, 1, 7, 5]   
+
+print("optimal ans is " , alphabeta(0 , 0 , values , True , float('-inf') , float('inf') , 3 ) )
